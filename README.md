@@ -17,7 +17,7 @@ if (empty($CFG->fileslastcleanup) or $CFG->fileslastcleanup < time() - 60*60*24)
 Сама крон задача:
 /var/www/moodle/lib/classes/task/file_trash_cleanup_task.php
 
-Альтернативно есть функция runtrash.php внутри плагина. Она просто перекопирована оттуда и можно вручную запускать её:
+Альтернативно есть функция runtrash.php внутри плагина. Она просто перекопирована оттуда и можно вручную запускать её:   
 sudo -u www-data php /var/www/moodle/local/courses_how_old/runtrash.php
 
 Коротко по файлам:
