@@ -10,7 +10,7 @@ id_user INT(11),
 \`option\` TEXT  
 );  
 
-/var/www/moodle/lib/filestorage/file_storage.php - где хранится cron задача. Нужно удалить условие: 
+/var/www/moodle/lib/filestorage/file_storage.php - где хранится cron задача. Нужно удалить условие:  
 if (empty($CFG->fileslastcleanup) or $CFG->fileslastcleanup < time() - 60*60*24) { 
 Так как зачастую он просто выдает false и не чистит 
 
