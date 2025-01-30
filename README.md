@@ -7,7 +7,7 @@ sudo chown -R www-data:www-data /var/www/moodle/local/courses_how_old/logs - ч�
 CREATE TABLE mdl_options (
 id INT(11) AUTO_INCREMENT PRIMARY KEY,
 id_user INT(11),
-`option` TEXT
+\`option\` TEXT
 );
 
 /var/www/moodle/lib/filestorage/file_storage.php - где хранится cron задача. Нужно удалить условие:
