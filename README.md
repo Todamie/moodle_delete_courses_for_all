@@ -1,7 +1,7 @@
 Плагин размещается в local/  
 sudo chown -R www-data:www-data /var/www/moodle/local/courses_how_old/logs - чтобы был доступ к записи логов в папку
 
-Надо почистить файл логов /var/www/moodle/local/courses_how_old/logs/deletion_log.txt
+Надо почистить файл логов /var/www/moodle/local/courses_how_old/logs/deletion_log.txt 
 
 Создание таблицы для работы с блокировками курсов в плагине:  
 CREATE TABLE mdl_options (  
@@ -10,9 +10,9 @@ id_user INT(11),
 \`option\` TEXT  
 );  
 
-/var/www/moodle/lib/filestorage/file_storage.php - где хранится cron задача. Нужно удалить условие:
-if (empty($CFG->fileslastcleanup) or $CFG->fileslastcleanup < time() - 60*60*24) {
-Так как зачастую он просто выдает false и не чистит
+/var/www/moodle/lib/filestorage/file_storage.php - где хранится cron задача. Нужно удалить условие: 
+if (empty($CFG->fileslastcleanup) or $CFG->fileslastcleanup < time() - 60*60*24) { 
+Так как зачастую он просто выдает false и не чистит 
 
 Сама крон задача:
 /var/www/moodle/lib/classes/task/file_trash_cleanup_task.php
