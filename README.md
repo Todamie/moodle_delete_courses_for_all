@@ -1,9 +1,9 @@
-Плагин размещается в local/
+Плагин размещается в local/  
 sudo chown -R www-data:www-data /var/www/moodle/local/courses_how_old/logs - чтобы был доступ к записи логов в папку
 
 Надо почистить файл логов /var/www/moodle/local/courses_how_old/logs/deletion_log.txt
 
-Создание таблицы для работы с блокировками курсов в плагине:
+Создание таблицы для работы с блокировками курсов в плагине:  
 CREATE TABLE mdl_options (  
 id INT(11) AUTO_INCREMENT PRIMARY KEY,  
 id_user INT(11),  
